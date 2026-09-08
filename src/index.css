@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #050816;
+    --bg-secondary: #0B1224;
+    --brand-blue: #19B5FE;
+    --accent-cyan: #00E5FF;
+    --brand-purple: #6C63FF;
+    --text-primary: #F8FAFC;
+    --text-muted: #94A3B8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #050816;
+    color: #F8FAFC;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Prevent browser default outline rings on mouse/touch clicks */
+  *:focus:not(:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Custom utility glow and gradient classes */
+.glow-cyan-subtle {
+  box-shadow: 0 0 25px -5px rgba(0, 229, 255, 0.2);
+}
+
+.glow-cyan-card {
+  box-shadow: 0 0 35px -5px rgba(0, 229, 255, 0.22);
+}
+
+.glow-blue-subtle {
+  box-shadow: 0 0 25px -5px rgba(25, 181, 254, 0.18);
+}
+
+.glass-card {
+  background: rgba(11, 18, 36, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 12px 35px -10px rgba(0, 229, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
