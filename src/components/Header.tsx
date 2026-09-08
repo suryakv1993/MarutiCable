@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter, Link } from '../context/RouterContext';
 import { SITE_CONFIG } from '../config/siteConfig';
-import { Wifi, CreditCard, ArrowUpRight } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
+import { Wifi, CreditCard, ArrowUpRight, Moon, Sun } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const { currentPath } = useRouter();
+  const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -31,8 +33,8 @@ export const Header: React.FC = () => {
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#050816]/90 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/40 py-3'
-            : 'bg-[#050816]/60 backdrop-blur-sm border-b border-white/5 py-4'
+            ? 'bg-white/90 dark:bg-[#050816]/90 backdrop-blur-md border-b border-slate-200 dark:border-white/10 shadow-lg shadow-black/10 dark:shadow-black/40 py-3'
+            : 'bg-white/70 dark:bg-[#050816]/60 backdrop-blur-sm border-b border-slate-200/70 dark:border-white/5 py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,11 +52,11 @@ export const Header: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold text-lg tracking-tight text-white font-['Manrope']">
+                  <span className="font-extrabold text-lg tracking-tight text-slate-900 dark:text-white font-['Manrope']">
                     MARUTI <span className="text-[#00E5FF]">CABLE</span>
                   </span>
                 </div>
-                <span className="text-[10px] tracking-wider uppercase text-[#94A3B8] font-medium -mt-0.5">
+                <span className="text-[10px] tracking-wider uppercase text-slate-500 dark:text-[#94A3B8] font-medium -mt-0.5">
                   Sindri Broadband
                 </span>
               </div>
@@ -70,8 +72,8 @@ export const Header: React.FC = () => {
                     to={item.path}
                     className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 relative ${
                       isActive
-                        ? 'text-[#00E5FF] bg-white/[0.04]'
-                        : 'text-slate-300 hover:text-white hover:bg-white/[0.03]'
+                        ? 'text-[#00E5FF] bg-white/[0.04] dark:text-[#00E5FF]'
+                        : 'text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.03]'
                     }`}
                   >
                     {item.label}
@@ -85,9 +87,18 @@ export const Header: React.FC = () => {
 
             {/* Desktop Action Buttons */}
             <div className="hidden lg:flex items-center space-x-3">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                aria-label="Toggle dark / light mode"
+                title="Toggle dark / light mode"
+                className="flex items-center justify-center w-9 h-9 rounded-lg border border-slate-300 dark:border-white/20 text-slate-700 dark:text-slate-200 bg-white dark:bg-white/[0.06] hover:bg-slate-100 dark:hover:bg-white/[0.12] transition-colors"
+              >
+                {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              </button>
               <Link
                 to="/pay-bill"
-                className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-slate-200 hover:text-white bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 rounded-lg transition-all"
+                className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white bg-white/[0.05] dark:bg-white/[0.05] hover:bg-white/[0.1] border border-slate-200 dark:border-white/10 rounded-lg transition-all"
               >
                 <CreditCard className="w-3.5 h-3.5 text-[#19B5FE]" />
                 <span>Pay Bill</span>
@@ -101,11 +112,19 @@ export const Header: React.FC = () => {
               </Link>
             </div>
 
-            {/* Mobile action button (Pay Bill) */}
+            {/* Mobile / Tablets: theme toggle + Pay Bill */}
             <div className="flex items-center gap-2 lg:hidden">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                aria-label="Toggle dark / light mode"
+                className="flex items-center justify-center w-9 h-9 rounded-lg border border-slate-300 dark:border-white/20 text-slate-700 dark:text-slate-200 bg-white dark:bg-white/[0.06] hover:bg-slate-100 dark:hover:bg-white/[0.12] transition-colors"
+              >
+                {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              </button>
               <Link
                 to="/pay-bill"
-                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-white bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 rounded-lg transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white bg-white/[0.06] dark:bg-white/[0.06] hover:bg-white/[0.1] border border-slate-200 dark:border-white/10 rounded-lg transition-colors"
               >
                 <CreditCard className="w-3.5 h-3.5 text-[#19B5FE]" />
                 <span>Pay Bill</span>

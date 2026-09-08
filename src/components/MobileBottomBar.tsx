@@ -40,7 +40,7 @@ export const MobileBottomBar: React.FC = () => {
   return (
     <nav
       aria-label="Mobile Bottom App Navigation"
-      className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[#050816]/95 backdrop-blur-xl border-t border-white/10 shadow-[0_-10px_35px_rgba(0,0,0,0.7)] px-2 pt-2 pb-[max(0.65rem,env(safe-area-inset-bottom))] transition-transform"
+      className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 dark:bg-[#050816]/95 backdrop-blur-xl border-t border-edge shadow-[0_-10px_35px_rgba(0,0,0,0.15)] dark:shadow-[0_-10px_35px_rgba(0,0,0,0.7)] px-2 pt-2 pb-[max(0.65rem,env(safe-area-inset-bottom))] transition-transform"
     >
       <div className="flex items-center justify-around max-w-md mx-auto">
         {tabs.map((tab) => {
@@ -57,7 +57,7 @@ export const MobileBottomBar: React.FC = () => {
               className={`relative flex-1 flex flex-col items-center justify-center py-1 px-1 rounded-xl transition-all duration-200 active:scale-90 outline-none focus:outline-none select-none ${
                 isActive
                   ? 'text-[#00E5FF]'
-                  : 'text-slate-400 hover:text-slate-200'
+                  : 'text-ink-faint hover:text-ink'
               }`}
             >
               {/* Active top indicator light */}
@@ -70,7 +70,7 @@ export const MobileBottomBar: React.FC = () => {
                   isActive
                     ? 'bg-[#00E5FF]/10 scale-105'
                     : tab.highlight
-                    ? 'bg-white/[0.04]'
+                    ? 'bg-slate-100/80 dark:bg-white/[0.04]'
                     : ''
                 }`}
               >
@@ -80,7 +80,7 @@ export const MobileBottomBar: React.FC = () => {
                       ? 'text-[#00E5FF] stroke-[2.4]'
                       : tab.highlight
                       ? 'text-[#19B5FE]'
-                      : 'text-slate-400 stroke-[1.8]'
+                      : 'text-ink-faint stroke-[1.8]'
                   }`}
                 />
                 {tab.highlight && !isActive && (
@@ -90,7 +90,7 @@ export const MobileBottomBar: React.FC = () => {
 
               <span
                 className={`text-[10px] font-semibold tracking-tight mt-0.5 whitespace-nowrap font-['Manrope'] ${
-                  isActive ? 'text-[#00E5FF] font-bold' : 'text-slate-400'
+                  isActive ? 'text-[#00E5FF] font-bold' : 'text-ink-faint'
                 }`}
               >
                 {tab.label}

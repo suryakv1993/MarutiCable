@@ -39,16 +39,16 @@ export const ProcessTimeline: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 relative bg-[#070c1d]/40 border-y border-white/5">
+    <section className="py-20 relative bg-surface-2/40 border-y border-edge">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-[#19B5FE] px-3 py-1 rounded-full bg-[#19B5FE]/10 border border-[#19B5FE]/20 inline-block mb-3 font-['Manrope']">
             Simple Onboarding
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             Get connected in four simple steps.
           </h2>
-          <p className="mt-3 text-base text-slate-400">
+          <p className="mt-3 text-base text-ink-faint">
             From your first inquiry to active fiber browsing, guided by our local Sindri technician crew.
           </p>
         </div>
@@ -70,28 +70,28 @@ export const ProcessTimeline: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="glass-card rounded-2xl p-6 border border-white/10 hover:border-[#00E5FF]/30 transition-all flex flex-col justify-between group"
+                  className="glass-card rounded-2xl p-6 border border-edge hover:border-[#00E5FF]/30 transition-all flex flex-col justify-between group"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 h-12 rounded-xl bg-[#0B1224] border border-white/15 flex items-center justify-center text-[#00E5FF] shadow-md group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 rounded-xl bg-surface border border-edge-strong flex items-center justify-center text-[#00E5FF] shadow-md group-hover:scale-110 transition-transform">
                         <Icon className={`w-6 h-6 ${step.color}`} />
                       </div>
-                      <span className="text-2xl font-extrabold text-white/20 font-mono group-hover:text-[#00E5FF]/50 transition-colors">
+                      <span className="text-2xl font-extrabold text-ink-strong/20 font-mono group-hover:text-[#00E5FF]/50 transition-colors">
                         {step.num}
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-white mb-2 font-['Manrope']">
+                    <h3 className="text-lg font-bold text-ink-strong mb-2 font-['Manrope']">
                       {step.title}
                     </h3>
 
-                    <p className="text-sm text-slate-300 leading-relaxed">
+                    <p className="text-sm text-ink-soft leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-white/5 flex items-center text-[11px] font-semibold text-[#00E5FF]">
+                  <div className="mt-6 pt-4 border-t border-edge flex items-center text-[11px] font-semibold text-[#00E5FF]">
                     <span>Step {step.num} of 04</span>
                   </div>
                 </motion.div>

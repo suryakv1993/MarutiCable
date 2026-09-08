@@ -90,10 +90,10 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
           <span className="text-xs font-bold uppercase tracking-widest text-[#00E5FF] px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 inline-block mb-3 font-['Manrope']">
             Network Footprint
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             Is Maruti Cable available near you?
           </h2>
-          <p className="mt-3 text-base text-slate-400">
+          <p className="mt-3 text-base text-ink-faint">
             Check immediate FTTH fiber availability or request a quick feasibility assessment in your neighborhood.
           </p>
         </div>
@@ -101,16 +101,16 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
         {/* Search Box */}
         <div className="max-w-2xl mx-auto mb-16">
           <form onSubmit={handleCheck} className="relative">
-            <div className="flex flex-col sm:flex-row gap-2.5 p-2 rounded-2xl bg-[#0B1224] border border-white/15 shadow-2xl focus-within:border-[#00E5FF] transition-all">
+            <div className="flex flex-col sm:flex-row gap-2.5 p-2 rounded-2xl bg-surface border border-edge-strong shadow-2xl focus-within:border-[#00E5FF] transition-all">
               <div className="relative flex-1 flex items-center pl-3">
-                <Search className="w-5 h-5 text-slate-400 mr-2 shrink-0" />
+                <Search className="w-5 h-5 text-ink-faint mr-2 shrink-0" />
                 <input
                   type="text"
                   maxLength={6}
                   value={pincode}
                   onChange={(e) => setPincode(e.target.value.replace(/\D/g, ''))}
                   placeholder="Enter 6-digit PIN (e.g. 828122)"
-                  className="w-full bg-transparent text-white placeholder-slate-400 focus:outline-none text-sm font-medium"
+                  className="w-full bg-transparent text-ink-strong placeholder-slate-400 focus:outline-none text-sm font-medium"
                 />
               </div>
 
@@ -119,7 +119,7 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
                   type="button"
                   onClick={handleUseLocation}
                   disabled={locationLoading}
-                  className="px-3 py-2.5 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-xs font-medium text-slate-300 flex items-center gap-1.5 transition-colors"
+                  className="px-3 py-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.05] hover:bg-slate-200 dark:hover:bg-white/[0.1] text-xs font-medium text-ink-soft flex items-center gap-1.5 transition-colors"
                   title="Detect approximate location"
                 >
                   <Navigation className="w-3.5 h-3.5 text-[#00E5FF]" />
@@ -143,8 +143,8 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
               animate={{ opacity: 1, y: 0 }}
               className={`mt-4 p-5 rounded-2xl border ${
                 result.found
-                  ? 'bg-[#00E5FF]/10 border-[#00E5FF]/30 text-slate-200'
-                  : 'bg-amber-500/10 border-amber-500/30 text-slate-200'
+                  ? 'bg-[#00E5FF]/10 border-[#00E5FF]/30 text-ink'
+                  : 'bg-amber-500/10 border-amber-500/30 text-ink'
               }`}
             >
               <div className="flex items-start gap-3">
@@ -155,7 +155,7 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
                 )}
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <h4 className="text-base font-bold text-white font-['Manrope']">
+                    <h4 className="text-base font-bold text-ink-strong font-['Manrope']">
                       {result.found
                         ? `Available in ${result.areaName} (${result.pincode})`
                         : `No direct record for PIN ${result.pincode || ''}`}
@@ -166,7 +166,7 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
                       </span>
                     )}
                   </div>
-                  <p className="mt-1 text-xs text-slate-300 leading-relaxed">
+                  <p className="mt-1 text-xs text-ink-soft leading-relaxed">
                     {result.notes}
                   </p>
 
@@ -181,7 +181,7 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
                     </Link>
                     <a
                       href={`tel:${SITE_CONFIG.contact.phone.replace(/[^+\d]/g, '')}`}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/[0.08] text-white text-xs font-semibold hover:bg-white/[0.14] transition-all"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-100 dark:bg-white/[0.08] text-ink-strong text-xs font-semibold hover:bg-slate-200 dark:hover:bg-white/[0.14] transition-all"
                     >
                       <PhoneCall className="w-3.5 h-3.5 text-[#00E5FF]" />
                       <span>Call {SITE_CONFIG.contact.phone}</span>
@@ -196,13 +196,13 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
         {/* Abstract Dhanbad/Sindri Network Topology Map */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Visual SVG Map */}
-          <div className="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 border border-white/10 relative overflow-hidden">
+          <div className="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 border border-edge relative overflow-hidden">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <h3 className="text-lg font-bold text-white font-['Manrope']">
+                <h3 className="text-lg font-bold text-ink-strong font-['Manrope']">
                   Dhanbad & Sindri Optical Topology
                 </h3>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-ink-faint">
                   Click any node to inspect coverage details
                 </p>
               </div>
@@ -213,7 +213,7 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
             </div>
 
             {/* SVG Network Graphic */}
-            <div className="relative w-full aspect-[16/10] bg-[#050816] rounded-2xl border border-white/5 p-4 flex items-center justify-center overflow-hidden">
+            <div className="relative w-full aspect-[16/10] bg-app rounded-2xl border border-edge p-4 flex items-center justify-center overflow-hidden">
               <svg className="w-full h-full" viewBox="0 0 600 380" fill="none">
                 {/* Background gridlines */}
                 <defs>
@@ -335,10 +335,10 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
 
           {/* Area List & Selected Zone Inspector */}
           <div className="lg:col-span-5 space-y-4">
-            <h3 className="text-base font-bold text-white uppercase tracking-wider font-['Manrope']">
+            <h3 className="text-base font-bold text-ink-strong uppercase tracking-wider font-['Manrope']">
               Service Areas in Dhanbad
             </h3>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-ink-faint">
               Select any colony or location to check local installation capability:
             </p>
 
@@ -352,14 +352,14 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
                     className={`p-3 rounded-xl text-left border transition-all flex flex-col justify-between ${
                       isSelected
                         ? 'bg-[#00E5FF]/10 border-[#00E5FF] text-white'
-                        : 'bg-white/[0.03] border-white/10 text-slate-300 hover:bg-white/[0.06]'
+                        : 'bg-slate-100/70 dark:bg-white/[0.03] border-edge text-ink-soft hover:bg-slate-200 dark:hover:bg-white/[0.06]'
                     }`}
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-bold">{area.name}</span>
                       <span className="w-1.5 h-1.5 rounded-full bg-[#00E5FF]" />
                     </div>
-                    <span className="text-[10px] text-slate-400 mt-1">
+                    <span className="text-[10px] text-ink-faint mt-1">
                       PIN: {area.pincode}
                     </span>
                   </button>
@@ -372,12 +372,12 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
                 key={selectedArea.name}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="p-4 rounded-2xl bg-[#0B1224] border border-[#00E5FF]/30 space-y-2"
+                className="p-4 rounded-2xl bg-surface border border-[#00E5FF]/30 space-y-2"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4 text-[#00E5FF]" />
-                    <span className="text-sm font-bold text-white">
+                    <span className="text-sm font-bold text-ink-strong">
                       {selectedArea.name}
                     </span>
                   </div>
@@ -385,11 +385,11 @@ export const CoverageChecker: React.FC<{ compact?: boolean }> = ({ compact = fal
                     PIN {selectedArea.pincode}
                   </span>
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-xs text-ink-soft leading-relaxed">
                   {selectedArea.notes}
                 </p>
                 <div className="pt-2 flex items-center justify-between">
-                  <span className="text-[11px] text-slate-400">
+                  <span className="text-[11px] text-ink-faint">
                     Same-day / fast-track feasibility
                   </span>
                   <Link

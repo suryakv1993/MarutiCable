@@ -11,10 +11,10 @@ export const ConnectionTypesSection: React.FC = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-[#00E5FF] px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 inline-block mb-3 font-['Manrope']">
             Connectivity Infrastructure
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             Choose the connection that works for you.
           </h2>
-          <p className="mt-3 text-base text-slate-400">
+          <p className="mt-3 text-base text-ink-faint">
             From direct optical fiber lines to rapid wireless outdoor links, we deliver high-reliability connectivity tailored to your location in Sindri.
           </p>
         </div>
@@ -26,7 +26,7 @@ export const ConnectionTypesSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="group relative rounded-3xl bg-gradient-to-b from-[#0B1224] to-[#070c1d] border border-white/10 p-8 sm:p-10 flex flex-col justify-between overflow-hidden shadow-2xl hover:border-[#00E5FF]/40 transition-all duration-300"
+            className="group relative rounded-3xl bg-gradient-to-b from-[#e0f2fe] to-[#f0f9ff] dark:from-[#0B1224] dark:to-[#070c1d] border border-edge p-8 sm:p-10 flex flex-col justify-between overflow-hidden shadow-2xl hover:border-[#00E5FF]/40 transition-all duration-300"
           >
             {/* Ambient glowing optical background visual */}
             <div className="absolute top-0 right-0 w-72 h-72 bg-[#00E5FF]/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20 group-hover:bg-[#00E5FF]/15 transition-all" />
@@ -62,10 +62,10 @@ export const ConnectionTypesSection: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-white font-['Manrope']">
+              <h3 className="text-2xl sm:text-3xl font-bold text-ink-strong font-['Manrope']">
                 Fiber Broadband
               </h3>
-              <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p className="mt-3 text-ink-soft text-sm sm:text-base leading-relaxed">
                 High-speed FTTH internet directly to your home or business.
               </p>
 
@@ -76,7 +76,7 @@ export const ConnectionTypesSection: React.FC = () => {
                   'Symmetric upload/download',
                   'Local support',
                 ].map((feat, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm text-slate-200">
+                  <div key={i} className="flex items-center gap-3 text-sm text-ink">
                     <div className="w-5 h-5 rounded-full bg-[#00E5FF]/15 border border-[#00E5FF]/30 flex items-center justify-center shrink-0">
                       <Check className="w-3 h-3 text-[#00E5FF]" />
                     </div>
@@ -103,7 +103,7 @@ export const ConnectionTypesSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="group relative rounded-3xl bg-gradient-to-b from-[#0B1224] to-[#070c1d] border border-white/10 p-8 sm:p-10 flex flex-col justify-between overflow-hidden shadow-2xl hover:border-[#6C63FF]/40 transition-all duration-300"
+            className="group relative rounded-3xl bg-gradient-to-b from-[#ede9fe] to-[#eef2ff] dark:from-[#0B1224] dark:to-[#070c1d] border border-edge p-8 sm:p-10 flex flex-col justify-between overflow-hidden shadow-2xl hover:border-[#6C63FF]/40 transition-all duration-300"
           >
             {/* Ambient glowing purple/blue background visual */}
             <div className="absolute top-0 right-0 w-72 h-72 bg-[#6C63FF]/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20 group-hover:bg-[#6C63FF]/15 transition-all" />
@@ -130,10 +130,10 @@ export const ConnectionTypesSection: React.FC = () => {
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-white font-['Manrope']">
+              <h3 className="text-2xl sm:text-3xl font-bold text-ink-strong font-['Manrope']">
                 Air-Fiber
               </h3>
-              <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p className="mt-3 text-ink-soft text-sm sm:text-base leading-relaxed">
                 Wireless broadband for locations where fiber has not reached yet.
               </p>
 
@@ -144,7 +144,7 @@ export const ConnectionTypesSection: React.FC = () => {
                   'Outdoor wireless equipment',
                   'Subject to feasibility',
                 ].map((feat, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm text-slate-200">
+                  <div key={i} className="flex items-center gap-3 text-sm text-ink">
                     <div className="w-5 h-5 rounded-full bg-[#6C63FF]/15 border border-[#6C63FF]/30 flex items-center justify-center shrink-0">
                       <Check className="w-3 h-3 text-[#6C63FF]" />
                     </div>
@@ -157,7 +157,7 @@ export const ConnectionTypesSection: React.FC = () => {
             <div className="mt-10 relative z-10">
               <Link
                 to="/air-fiber"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] border border-white/15 text-white text-sm font-bold active:scale-95 transition-all"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/[0.14] border border-edge-strong text-ink-strong text-sm font-bold active:scale-95 transition-all"
               >
                 <span>Explore Air-Fiber</span>
                 <ArrowRight className="w-4 h-4 text-[#6C63FF]" />

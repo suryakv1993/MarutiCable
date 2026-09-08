@@ -52,16 +52,16 @@ export const NetworkDiagram: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 relative bg-[#070c1d]/50 border-y border-white/5 overflow-hidden">
+    <section className="py-20 relative bg-surface-2/50 border-y border-edge overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-xs font-bold uppercase tracking-widest text-[#19B5FE] px-3 py-1 rounded-full bg-[#19B5FE]/10 border border-[#19B5FE]/20 inline-block mb-3 font-['Manrope']">
             Architecture
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             Your connection starts with a stronger network.
           </h2>
-          <p className="mt-3 text-base text-slate-400">
+          <p className="mt-3 text-base text-ink-faint">
             How data flows seamlessly from international internet gateways through our Sindri distribution hubs straight to your devices.
           </p>
         </div>
@@ -95,7 +95,7 @@ export const NetworkDiagram: React.FC = () => {
                     transition={{ duration: 0.4, delay: idx * 0.08 }}
                     className={`w-full glass-card rounded-2xl p-5 sm:p-6 border ${step.border} text-center flex flex-col items-center relative group hover:border-[#00E5FF] hover:shadow-xl hover:shadow-[#00E5FF]/10 transition-all`}
                   >
-                    <div className="w-14 h-14 rounded-2xl bg-[#070c1d] border border-white/10 flex items-center justify-center mb-4 shadow-lg group-hover:scale-105 group-hover:border-[#00E5FF]/40 transition-all">
+                    <div className="w-14 h-14 rounded-2xl bg-surface-2 border border-edge flex items-center justify-center mb-4 shadow-lg group-hover:scale-105 group-hover:border-[#00E5FF]/40 transition-all">
                       <Icon className={`w-7 h-7 ${step.color}`} />
                     </div>
 
@@ -103,11 +103,11 @@ export const NetworkDiagram: React.FC = () => {
                       Stage 0{step.id}
                     </span>
 
-                    <h3 className="text-base font-bold text-white mb-1 font-['Manrope']">
+                    <h3 className="text-base font-bold text-ink-strong mb-1 font-['Manrope']">
                       {step.title}
                     </h3>
 
-                    <p className="text-xs text-slate-400">
+                    <p className="text-xs text-ink-faint">
                       {step.subtitle}
                     </p>
                   </motion.div>
@@ -126,7 +126,7 @@ export const NetworkDiagram: React.FC = () => {
 
         {/* Network status note */}
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-xs text-slate-300">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100/80 dark:bg-white/[0.04] border border-edge text-xs text-ink-soft">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>24×7 Active Optical Monitoring on all Sindri fiber junctions</span>
           </div>

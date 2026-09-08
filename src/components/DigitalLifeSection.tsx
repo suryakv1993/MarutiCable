@@ -39,16 +39,16 @@ export const DigitalLifeSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 relative bg-[#070c1d]/60 border-y border-white/5">
+    <section className="py-20 relative bg-surface-2/60 border-y border-edge">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-xs font-bold uppercase tracking-widest text-[#19B5FE] px-3 py-1 rounded-full bg-[#19B5FE]/10 border border-[#19B5FE]/20 inline-block mb-3 font-['Manrope']">
             Everyday Performance
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             Built for the way you use the internet.
           </h2>
-          <p className="mt-3 text-base text-slate-400">
+          <p className="mt-3 text-base text-ink-faint">
             Engineered to handle simultaneous devices and continuous household demands across Sindri.
           </p>
         </div>
@@ -63,22 +63,22 @@ export const DigitalLifeSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className={`group glass-card rounded-2xl p-6 sm:p-7 border border-white/10 ${card.borderColor} transition-all duration-300 relative overflow-hidden`}
+                className={`group glass-card rounded-2xl p-6 sm:p-7 border border-edge ${card.borderColor} transition-all duration-300 relative overflow-hidden`}
               >
                 <div
                   className={`absolute -top-12 -right-12 w-28 h-28 bg-gradient-to-br ${card.bgColor} rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500`}
                 />
 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-white/[0.05] border border-edge flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <Icon className={`w-6 h-6 ${card.color}`} />
                   </div>
 
-                  <h3 className="text-lg font-bold text-white mb-2 font-['Manrope']">
+                  <h3 className="text-lg font-bold text-ink-strong mb-2 font-['Manrope']">
                     {card.title}
                   </h3>
 
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm text-ink-soft leading-relaxed">
                     {card.desc}
                   </p>
                 </div>

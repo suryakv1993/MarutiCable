@@ -49,10 +49,10 @@ export const WhyMarutiSection: React.FC = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-[#00E5FF] px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 inline-block mb-3 font-['Manrope']">
             Our Advantage
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             Why Sindri chooses Maruti Cable
           </h2>
-          <p className="mt-3 text-base text-slate-400">
+          <p className="mt-3 text-base text-ink-faint">
             Backed by franchise-grade optical routing and powered by dedicated local technicians.
           </p>
         </div>
@@ -67,16 +67,16 @@ export const WhyMarutiSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.06 }}
-                className="glass-card rounded-2xl p-6 sm:p-7 border border-white/10 hover:border-[#00E5FF]/30 transition-all duration-300 flex items-start gap-4 group"
+                className="glass-card rounded-2xl p-6 sm:p-7 border border-edge hover:border-[#00E5FF]/30 transition-all duration-300 flex items-start gap-4 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-white/[0.08] transition-all">
+                <div className="w-12 h-12 rounded-xl bg-slate-100/80 dark:bg-white/[0.04] border border-edge flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-slate-200 dark:group-hover:bg-white/[0.08] transition-all">
                   <Icon className={`w-6 h-6 ${card.color}`} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1.5 font-['Manrope']">
+                  <h3 className="text-lg font-bold text-ink-strong mb-1.5 font-['Manrope']">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm text-ink-soft leading-relaxed">
                     {card.desc}
                   </p>
                 </div>

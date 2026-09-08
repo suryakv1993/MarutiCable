@@ -5,7 +5,7 @@ import { Wifi, MapPin, Phone, Mail, Clock, ShieldCheck, FileText, ExternalLink }
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#030611] border-t border-white/10 text-slate-400 relative overflow-hidden">
+    <footer className="bg-slate-50 dark:bg-[#030611] border-t border-edge text-ink-faint relative overflow-hidden">
       {/* Subtle top accent line */}
       <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#00E5FF]/40 to-transparent" />
 
@@ -20,36 +20,36 @@ export const Footer: React.FC = () => {
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="font-extrabold text-lg tracking-tight text-white font-['Manrope']">
+                <span className="font-extrabold text-lg tracking-tight text-ink-strong font-['Manrope']">
                   MARUTI <span className="text-[#00E5FF]">CABLE</span>
                 </span>
-                <span className="text-[10px] tracking-wider uppercase text-slate-400 font-medium -mt-0.5">
+                <span className="text-[10px] tracking-wider uppercase text-ink-faint font-medium -mt-0.5">
                   {SITE_CONFIG.tagline}
                 </span>
               </div>
             </Link>
 
-            <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
-              Sindri-based broadband service firm operated by <span className="text-white font-medium">{SITE_CONFIG.operatorName}</span>. 
+            <p className="text-sm text-ink-soft leading-relaxed max-w-sm">
+              Sindri-based broadband service firm operated by <span className="text-ink-strong font-medium">{SITE_CONFIG.operatorName}</span>. 
               Authorised franchise partner of <span className="text-[#00E5FF] font-medium">{SITE_CONFIG.franchisePartner}</span>, 
               connecting homes, local enterprises, and digital learning across Sindri and surrounding Dhanbad since {SITE_CONFIG.servingSince}.
             </p>
 
-            <div className="pt-2 flex flex-col space-y-2 text-xs text-slate-400">
+            <div className="pt-2 flex flex-col space-y-2 text-xs text-ink-faint">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#19B5FE] shrink-0" />
                 <span>Authorised Xpress Fiber Franchise Partner</span>
               </div>
               <div className="flex items-center gap-2">
                 <FileText className="w-4 h-4 text-[#00E5FF] shrink-0" />
-                <span>Udyam Reg: <span className="font-mono text-slate-300">{SITE_CONFIG.udyamRegistration}</span></span>
+                <span>Udyam Reg: <span className="font-mono text-ink-soft">{SITE_CONFIG.udyamRegistration}</span></span>
               </div>
             </div>
           </div>
 
           {/* Col 1: Services */}
           <div>
-            <p className="text-xs font-bold text-white uppercase tracking-wider mb-4 font-['Manrope']">
+            <p className="text-xs font-bold text-ink-strong uppercase tracking-wider mb-4 font-['Manrope']">
               Services
             </p>
             <ul className="space-y-2.5 text-sm">
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Company & Support */}
           <div>
-            <p className="text-xs font-bold text-white uppercase tracking-wider mb-4 font-['Manrope']">
+            <p className="text-xs font-bold text-ink-strong uppercase tracking-wider mb-4 font-['Manrope']">
               Company
             </p>
             <ul className="space-y-2.5 text-sm">
@@ -117,14 +117,14 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Contact & Office */}
           <div>
-            <p className="text-xs font-bold text-white uppercase tracking-wider mb-4 font-['Manrope']">
+            <p className="text-xs font-bold text-ink-strong uppercase tracking-wider mb-4 font-['Manrope']">
               Sindri Office
             </p>
             <div className="space-y-3 text-xs leading-relaxed">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#00E5FF] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-slate-300 block">
+                  <span className="text-ink-soft block">
                     {SITE_CONFIG.contact.address.full}
                   </span>
                   <a
@@ -142,7 +142,7 @@ export const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 text-[#19B5FE] shrink-0" />
                 <a
                   href={`tel:${SITE_CONFIG.contact.phone.replace(/[^+\d]/g, '')}`}
-                  className="text-slate-300 hover:text-white transition-colors"
+                  className="text-ink-soft hover:text-ink-strong transition-colors"
                 >
                   {SITE_CONFIG.contact.phone}
                 </a>
@@ -151,13 +151,13 @@ export const Footer: React.FC = () => {
                 <Mail className="w-4 h-4 text-[#00E5FF] shrink-0" />
                 <a
                   href={`mailto:${SITE_CONFIG.contact.email}`}
-                  className="text-slate-300 hover:text-white transition-colors"
+                  className="text-ink-soft hover:text-ink-strong transition-colors"
                 >
                   {SITE_CONFIG.contact.email}
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Clock className="w-4 h-4 text-slate-400 shrink-0" />
+                <Clock className="w-4 h-4 text-ink-faint shrink-0" />
                 <span>{SITE_CONFIG.contact.officeHours}</span>
               </div>
             </div>
@@ -165,29 +165,29 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Legal Links Bar */}
-        <div className="pt-8 border-t border-white/[0.07] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-8 border-t border-slate-200 dark:border-white/[0.07] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ink-faint">
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2">
-            <Link to="/terms" className="hover:text-slate-200 transition-colors">
+            <Link to="/terms" className="hover:text-ink transition-colors">
               Terms & Conditions
             </Link>
-            <Link to="/privacy" className="hover:text-slate-200 transition-colors">
+            <Link to="/privacy" className="hover:text-ink transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/refund" className="hover:text-slate-200 transition-colors">
+            <Link to="/refund" className="hover:text-ink transition-colors">
               Refund & Cancellation
             </Link>
-            <Link to="/service-delivery" className="hover:text-slate-200 transition-colors">
+            <Link to="/service-delivery" className="hover:text-ink transition-colors">
               Service Delivery Policy
             </Link>
           </div>
 
-          <div className="text-center md:text-right text-slate-400">
+          <div className="text-center md:text-right text-ink-faint">
             &copy; {new Date().getFullYear()} Maruti Cable. All rights reserved.
           </div>
         </div>
 
         {/* Central Tax Note */}
-        <div className="mt-4 pt-4 border-t border-white/[0.04] text-center text-[11px] text-slate-400">
+        <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/[0.04] text-center text-[11px] text-ink-faint">
           {SITE_CONFIG.pricingTaxNotice}
         </div>
       </div>

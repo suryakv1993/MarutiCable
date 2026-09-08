@@ -46,16 +46,16 @@ export const StatsStrip: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="glass-card rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 border border-white/10 hover:border-white/20 transition-all shadow-lg shadow-black/30"
+              className="glass-card rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 border border-edge hover:border-edge-strong transition-all shadow-lg shadow-black/30"
             >
-              <div className={`p-2.5 rounded-xl bg-white/[0.04] border ${item.border} shrink-0`}>
+              <div className={`p-2.5 rounded-xl bg-slate-100/80 dark:bg-white/[0.04] border ${item.border} shrink-0`}>
                 <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${item.accent}`} />
               </div>
               <div>
-                <div className="text-base sm:text-lg font-extrabold text-white tracking-tight font-['Manrope']">
+                <div className="text-base sm:text-lg font-extrabold text-ink-strong tracking-tight font-['Manrope']">
                   {item.title}
                 </div>
-                <div className="text-xs text-slate-400 font-medium">
+                <div className="text-xs text-ink-faint font-medium">
                   {item.subtitle}
                 </div>
               </div>

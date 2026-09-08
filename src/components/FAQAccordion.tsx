@@ -26,10 +26,10 @@ export const FAQAccordion: React.FC<{
     <section className="py-16 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             {title}
           </h2>
-          {subtitle && <p className="mt-2 text-sm text-slate-400">{subtitle}</p>}
+          {subtitle && <p className="mt-2 text-sm text-ink-faint">{subtitle}</p>}
         </div>
 
         <div className="space-y-3">
@@ -38,7 +38,7 @@ export const FAQAccordion: React.FC<{
             return (
               <div
                 key={idx}
-                className="glass-card rounded-2xl border border-white/10 overflow-hidden transition-colors"
+                className="glass-card rounded-2xl border border-edge overflow-hidden transition-colors"
               >
                 <button
                   type="button"
@@ -46,7 +46,7 @@ export const FAQAccordion: React.FC<{
                   className="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-[#00E5FF]/40 rounded-2xl"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm sm:text-base font-bold text-white font-['Manrope']">
+                  <span className="text-sm sm:text-base font-bold text-ink-strong font-['Manrope']">
                     {item.question}
                   </span>
                   <ChevronDown
@@ -64,7 +64,7 @@ export const FAQAccordion: React.FC<{
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                     >
-                      <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5">
+                      <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-ink-soft leading-relaxed border-t border-edge">
                         {item.answer}
                       </div>
                     </motion.div>

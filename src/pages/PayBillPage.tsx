@@ -56,21 +56,21 @@ export const PayBillPage: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-3xl">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs text-slate-400 mb-4" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-xs text-ink-faint mb-4" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#00E5FF] transition-colors">
               Home
             </Link>
             <span>&rsaquo;</span>
-            <span className="text-white font-medium">Pay your bill</span>
+            <span className="text-ink-strong font-medium">Pay your bill</span>
           </nav>
 
           <span className="text-xs font-bold uppercase tracking-widest text-[#00E5FF] px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 inline-block mb-3 font-['Manrope']">
             Secure Payment Desk
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             Pay Your Bill
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
             Online, by UPI or at our office, whichever suits you. A receipt is issued for every payment.
           </p>
         </div>
@@ -98,21 +98,21 @@ export const PayBillPage: React.FC = () => {
                 </span>
               </div>
 
-              <h2 className="text-2xl font-extrabold text-white font-['Manrope'] mb-2">
+              <h2 className="text-2xl font-extrabold text-ink-strong font-['Manrope'] mb-2">
                 Pay online
               </h2>
-              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+              <p className="text-sm text-ink-soft leading-relaxed mb-6">
                 Pay by UPI, debit card, credit card or net banking. A receipt is issued immediately after payment.
               </p>
 
-              <div className="p-4 rounded-2xl bg-[#050816]/80 border border-white/10 mb-6 space-y-2">
-                <div className="flex items-start gap-2 text-xs text-slate-300 leading-relaxed">
+              <div className="p-4 rounded-2xl bg-app/80 border border-edge mb-6 space-y-2">
+                <div className="flex items-start gap-2 text-xs text-ink-soft leading-relaxed">
                   <ShieldCheck className="w-4 h-4 text-[#00E5FF] shrink-0 mt-0.5" />
                   <span>
                     Opens on our own secure checkout, processed by <strong>Cashfree Payments</strong>.
                   </span>
                 </div>
-                <div className="flex items-start gap-2 text-xs text-amber-300/90 leading-relaxed pt-2 border-t border-white/5">
+                <div className="flex items-start gap-2 text-xs text-amber-300/90 leading-relaxed pt-2 border-t border-edge">
                   <span className="font-semibold shrink-0">Note:</span>
                   <span>
                     Payment karte samay apna <strong>registered mobile number</strong> or <strong>customer ID</strong> mention karein so that the amount can be credited to your account without delay.
@@ -131,7 +131,7 @@ export const PayBillPage: React.FC = () => {
                 <span>Open Secure Payment Page</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
-              <p className="text-[11px] text-center text-slate-400">
+              <p className="text-[11px] text-center text-ink-faint">
                 Processed over 256-bit encrypted checkout (UPI / Cards / Net Banking)
               </p>
             </div>
@@ -142,7 +142,7 @@ export const PayBillPage: React.FC = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.1 }}
-            className="glass-card rounded-3xl p-7 sm:p-8 border border-white/15 flex flex-col justify-between shadow-xl"
+            className="glass-card rounded-3xl p-7 sm:p-8 border border-edge-strong flex flex-col justify-between shadow-xl"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -154,37 +154,37 @@ export const PayBillPage: React.FC = () => {
                 </span>
               </div>
 
-              <h2 className="text-2xl font-extrabold text-white font-['Manrope'] mb-2">
+              <h2 className="text-2xl font-extrabold text-ink-strong font-['Manrope'] mb-2">
                 Pay by UPI
               </h2>
-              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+              <p className="text-sm text-ink-soft leading-relaxed mb-6">
                 Pay from Google Pay, PhonePe, Paytm, BHIM, or any UPI app to our registered number:
               </p>
 
               {/* UPI Pill */}
-              <div className="p-4 rounded-2xl bg-[#050816] border border-[#25D366]/30 flex items-center justify-between gap-3 mb-6">
+              <div className="p-4 rounded-2xl bg-app border border-[#25D366]/30 flex items-center justify-between gap-3 mb-6">
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">
+                  <span className="text-[10px] uppercase font-bold text-ink-faint tracking-wider block">
                     Registered Mobile / UPI VPA
                   </span>
                   <span className="text-xl sm:text-2xl font-mono font-extrabold text-[#25D366]">
                     {SITE_CONFIG.contact.phone}
                   </span>
-                  <span className="text-xs font-mono text-slate-400 block mt-0.5">
+                  <span className="text-xs font-mono text-ink-faint block mt-0.5">
                     UPI ID: {SITE_CONFIG.upi.vpa}
                   </span>
                 </div>
                 <button
                   type="button"
                   onClick={() => copyToClipboard(SITE_CONFIG.contact.phoneRaw, 'upi')}
-                  className="px-3 py-2 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-xs font-semibold text-white transition-all flex items-center gap-1.5 shrink-0"
+                  className="px-3 py-2 rounded-xl bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/[0.14] text-xs font-semibold text-ink-strong transition-all flex items-center gap-1.5 shrink-0"
                 >
                   <Copy className="w-3.5 h-3.5 text-[#00E5FF]" />
                   <span>{copiedField === 'upi' ? 'Copied!' : 'Copy'}</span>
                 </button>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 text-xs text-slate-300 leading-relaxed mb-6">
+              <div className="p-3.5 rounded-xl bg-slate-100/70 dark:bg-white/[0.03] border border-edge text-xs text-ink-soft leading-relaxed mb-6">
                 After paying, please send the screenshot on{' '}
                 <a
                   href={getWhatsAppLink('Hi, I made a UPI payment of my broadband bill. Here is my payment screenshot.')}
@@ -210,7 +210,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
               </a>
               <a
                 href={SITE_CONFIG.upi.qrPayload}
-                className="inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-xs font-semibold text-white border border-white/10 transition-all"
+                className="inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/[0.14] text-xs font-semibold text-ink-strong border border-edge transition-all"
               >
                 <span>Open UPI App</span>
               </a>
@@ -222,52 +222,52 @@ WhatsApp ({SITE_CONFIG.contact.phone})
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            className="glass-card rounded-3xl p-7 sm:p-8 border border-white/15 flex flex-col justify-between shadow-xl"
+            className="glass-card rounded-3xl p-7 sm:p-8 border border-edge-strong flex flex-col justify-between shadow-xl"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#6C63FF]/15 text-[#6C63FF] flex items-center justify-center font-bold border border-[#6C63FF]/30">
                   <Building2 className="w-6 h-6" />
                 </div>
-                <span className="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-white/[0.06] text-slate-300">
+                <span className="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-100 dark:bg-white/[0.06] text-ink-soft">
                   Commercial & Net Banking
                 </span>
               </div>
 
-              <h2 className="text-2xl font-extrabold text-white font-['Manrope'] mb-2">
+              <h2 className="text-2xl font-extrabold text-ink-strong font-['Manrope'] mb-2">
                 Bank transfer / NEFT / IMPS
               </h2>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-ink-soft leading-relaxed mb-6">
                 Transfer directly to our official ICICI Bank account:
               </p>
 
-              <div className="space-y-2.5 p-4 rounded-2xl bg-[#050816] border border-white/10 text-xs">
-                <div className="flex justify-between items-start py-1 border-b border-white/5">
-                  <span className="text-slate-400">Account Name</span>
+              <div className="space-y-2.5 p-4 rounded-2xl bg-app border border-edge text-xs">
+                <div className="flex justify-between items-start py-1 border-b border-edge">
+                  <span className="text-ink-faint">Account Name</span>
                   <span className="text-right">
-                    <strong className="text-white block font-medium">Sunil Kumar</strong>
-                    <span className="text-[11px] text-slate-400">Proprietor, M/s Maruti Cable</span>
+                    <strong className="text-ink-strong block font-medium">Sunil Kumar</strong>
+                    <span className="text-[11px] text-ink-faint">Proprietor, M/s Maruti Cable</span>
                   </span>
                 </div>
 
-                <div className="flex justify-between items-center py-1 border-b border-white/5">
-                  <span className="text-slate-400">Bank</span>
-                  <span className="text-white font-medium">ICICI Bank Ltd.</span>
+                <div className="flex justify-between items-center py-1 border-b border-edge">
+                  <span className="text-ink-faint">Bank</span>
+                  <span className="text-ink-strong font-medium">ICICI Bank Ltd.</span>
                 </div>
 
-                <div className="flex justify-between items-center py-1 border-b border-white/5">
-                  <span className="text-slate-400">Branch</span>
-                  <span className="text-slate-300">Dhanbad (Shastri Nagar, Bank More)</span>
+                <div className="flex justify-between items-center py-1 border-b border-edge">
+                  <span className="text-ink-faint">Branch</span>
+                  <span className="text-ink-soft">Dhanbad (Shastri Nagar, Bank More)</span>
                 </div>
 
-                <div className="flex justify-between items-center py-1.5 border-b border-white/5">
-                  <span className="text-slate-400">Account Number</span>
+                <div className="flex justify-between items-center py-1.5 border-b border-edge">
+                  <span className="text-ink-faint">Account Number</span>
                   <div className="flex items-center gap-2">
-                    <span className="text-white font-mono font-bold text-sm">{SITE_CONFIG.bankDetails.accountNumber}</span>
+                    <span className="text-ink-strong font-mono font-bold text-sm">{SITE_CONFIG.bankDetails.accountNumber}</span>
                     <button
                       type="button"
                       onClick={() => copyToClipboard(SITE_CONFIG.bankDetails.accountNumber, 'acc')}
-                      className="p-1.5 rounded-lg bg-white/[0.08] hover:bg-white/[0.14] text-slate-300 hover:text-white transition-colors"
+                      className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/[0.14] text-ink-soft hover:text-ink-strong transition-colors"
                       title="Copy Account Number"
                     >
                       <Copy className="w-3.5 h-3.5" />
@@ -276,13 +276,13 @@ WhatsApp ({SITE_CONFIG.contact.phone})
                 </div>
 
                 <div className="flex justify-between items-center py-1.5">
-                  <span className="text-slate-400">IFSC Code</span>
+                  <span className="text-ink-faint">IFSC Code</span>
                   <div className="flex items-center gap-2">
                     <span className="text-[#00E5FF] font-mono font-bold text-sm">{SITE_CONFIG.bankDetails.ifsc}</span>
                     <button
                       type="button"
                       onClick={() => copyToClipboard(SITE_CONFIG.bankDetails.ifsc, 'ifsc')}
-                      className="p-1.5 rounded-lg bg-white/[0.08] hover:bg-white/[0.14] text-slate-300 hover:text-white transition-colors"
+                      className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/[0.14] text-ink-soft hover:text-ink-strong transition-colors"
                       title="Copy IFSC Code"
                     >
                       <Copy className="w-3.5 h-3.5" />
@@ -298,15 +298,15 @@ WhatsApp ({SITE_CONFIG.contact.phone})
               )}
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/5 space-y-3">
-              <p className="text-xs text-slate-300">
+            <div className="mt-6 pt-4 border-t border-edge space-y-3">
+              <p className="text-xs text-ink-soft">
                 Please send us the <strong>UTR number</strong> on WhatsApp after the transfer so that your account is updated immediately.
               </p>
               <a
                 href={getWhatsAppLink('Hi Sunil Kumar / Maruti Cable, I have completed a bank transfer (NEFT/IMPS) for my broadband. Here is my UTR reference: ')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-xs font-semibold text-white border border-white/10 transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/[0.14] text-xs font-semibold text-ink-strong border border-edge transition-all"
               >
                 <MessageSquare className="w-4 h-4 text-[#25D366]" />
                 <span>Submit UTR on WhatsApp ({SITE_CONFIG.contact.phone})</span>
@@ -319,7 +319,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
-            className="glass-card rounded-3xl p-7 sm:p-8 border border-white/15 flex flex-col justify-between shadow-xl"
+            className="glass-card rounded-3xl p-7 sm:p-8 border border-edge-strong flex flex-col justify-between shadow-xl"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -331,27 +331,27 @@ WhatsApp ({SITE_CONFIG.contact.phone})
                 </span>
               </div>
 
-              <h2 className="text-2xl font-extrabold text-white font-['Manrope'] mb-2">
+              <h2 className="text-2xl font-extrabold text-ink-strong font-['Manrope'] mb-2">
                 Pay at our office
               </h2>
-              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+              <p className="text-sm text-ink-soft leading-relaxed mb-6">
                 Cash payments are accepted at our Sindri office. A receipt is issued for every payment &mdash; please always collect it.
               </p>
 
-              <div className="p-4 rounded-2xl bg-[#050816] border border-white/10 space-y-3 mb-6">
-                <div className="flex items-start gap-2.5 text-xs text-slate-200">
+              <div className="p-4 rounded-2xl bg-app border border-edge space-y-3 mb-6">
+                <div className="flex items-start gap-2.5 text-xs text-ink">
                   <MapPin className="w-4 h-4 text-[#00E5FF] shrink-0 mt-0.5" />
                   <span className="leading-relaxed">
                     QR No. L/148, L-Type Colony, Sindri, Block Jharia, Dhanbad, Jharkhand &ndash; 828122
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-slate-300 pt-2 border-t border-white/5">
+                <div className="flex items-center gap-2.5 text-xs text-ink-soft pt-2 border-t border-edge">
                   <Clock className="w-4 h-4 text-amber-400 shrink-0" />
                   <span>9:30 AM &ndash; 8:30 PM (Mon&ndash;Sun)</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-slate-300">
+                <div className="flex items-center gap-2.5 text-xs text-ink-soft">
                   <Phone className="w-4 h-4 text-[#19B5FE] shrink-0" />
-                  <a href={getTelLink()} className="text-white hover:underline">
+                  <a href={getTelLink()} className="text-ink-strong hover:underline">
                     {SITE_CONFIG.contact.phone}
                   </a>
                 </div>
@@ -363,7 +363,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
                 href={getGoogleMapsOfficeLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-xs font-semibold text-white border border-white/10 transition-all shadow-sm"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/[0.14] text-xs font-semibold text-ink-strong border border-edge transition-all shadow-sm"
               >
                 <MapPin className="w-4 h-4 text-[#00E5FF]" />
                 <span>View Office on Google Maps</span>
@@ -379,7 +379,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
           <div className="w-10 h-10 rounded-xl bg-[#00E5FF]/20 text-[#00E5FF] flex items-center justify-center shrink-0">
             <ShieldCheck className="w-6 h-6" />
           </div>
-          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <p className="text-xs sm:text-sm text-ink-soft leading-relaxed">
             The payment page opens on our own secure checkout, processed by <strong>Cashfree Payments</strong>. You may pay by UPI, debit card, credit card or net banking. A reference number is shown on screen as soon as the payment completes &mdash; please keep it for your records.
           </p>
         </div>
@@ -387,15 +387,15 @@ WhatsApp ({SITE_CONFIG.contact.phone})
 
       {/* Interactive Renewal & Recharge Calculator */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="glass-card rounded-3xl p-7 sm:p-10 border border-white/15 shadow-2xl">
+        <div className="glass-card rounded-3xl p-7 sm:p-10 border border-edge-strong shadow-2xl">
           <div className="max-w-2xl mb-8">
             <span className="text-xs font-bold uppercase tracking-wider text-[#00E5FF] px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 inline-block mb-2">
               Plan Renewal Calculator
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-['Manrope']">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-ink-strong font-['Manrope']">
               Calculate Your Plan Advance
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1">
+            <p className="text-xs sm:text-sm text-ink-faint mt-1">
               Select your connection category, plan speed, and advance billing duration to see exact payable amount.
             </p>
           </div>
@@ -404,10 +404,10 @@ WhatsApp ({SITE_CONFIG.contact.phone})
             <div className="lg:col-span-7 space-y-6">
               {/* Category Selector */}
               <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-bold text-ink-soft uppercase tracking-wider mb-2">
                   1. Service Type
                 </label>
-                <div className="inline-flex p-1.5 rounded-2xl bg-[#050816] border border-white/10 gap-1.5">
+                <div className="inline-flex p-1.5 rounded-2xl bg-app border border-edge gap-1.5">
                   <button
                     type="button"
                     onClick={() => {
@@ -417,7 +417,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
                     className={`px-5 py-2 rounded-xl text-xs font-bold transition-all ${
                       selectedPlanCategory === 'fiber'
                         ? 'bg-gradient-to-r from-[#19B5FE] to-[#00E5FF] text-[#050816] shadow-md'
-                        : 'text-slate-400 hover:text-white'
+                        : 'text-ink-faint hover:text-ink-strong'
                     }`}
                   >
                     Fiber Broadband (FTTH)
@@ -431,7 +431,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
                     className={`px-5 py-2 rounded-xl text-xs font-bold transition-all ${
                       selectedPlanCategory === 'air-fiber'
                         ? 'bg-gradient-to-r from-[#6C63FF] to-[#19B5FE] text-white shadow-md'
-                        : 'text-slate-400 hover:text-white'
+                        : 'text-ink-faint hover:text-ink-strong'
                     }`}
                   >
                     Air-Fiber Wireless
@@ -441,7 +441,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
 
               {/* Plan Options */}
               <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-bold text-ink-soft uppercase tracking-wider mb-2">
                   2. Select Plan Speed
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -455,14 +455,14 @@ WhatsApp ({SITE_CONFIG.contact.phone})
                         className={`p-3 rounded-2xl border text-left transition-all ${
                           isSelected
                             ? 'bg-[#00E5FF]/10 border-[#00E5FF] text-white shadow-sm'
-                            : 'bg-[#050816] border-white/10 text-slate-400 hover:text-white hover:border-white/20'
+                            : 'bg-app border-edge text-ink-faint hover:text-ink-strong hover:border-edge-strong'
                         }`}
                       >
-                        <div className="text-lg font-extrabold font-['Manrope'] text-white">
+                        <div className="text-lg font-extrabold font-['Manrope'] text-ink-strong">
                           {plan.speedMbps}{' '}
                           <span className="text-xs font-normal text-[#00E5FF]">Mbps</span>
                         </div>
-                        <div className="text-xs text-slate-300 font-medium mt-0.5">₹{plan.monthlyPrice}/mo</div>
+                        <div className="text-xs text-ink-soft font-medium mt-0.5">₹{plan.monthlyPrice}/mo</div>
                       </button>
                     );
                   })}
@@ -471,7 +471,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
 
               {/* Advance Billing Cycle */}
               <div>
-                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-bold text-ink-soft uppercase tracking-wider mb-2">
                   3. Billing Cycle Duration
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -490,13 +490,13 @@ WhatsApp ({SITE_CONFIG.contact.phone})
                         className={`p-3 rounded-2xl border text-left transition-all ${
                           isSelected
                             ? 'bg-[#19B5FE] text-[#050816] font-bold border-[#19B5FE] shadow-md shadow-[#19B5FE]/20'
-                            : 'bg-[#050816] border-white/10 text-slate-400 hover:text-white hover:border-white/20'
+                            : 'bg-app border-edge text-ink-faint hover:text-ink-strong hover:border-edge-strong'
                         }`}
                       >
-                        <div className={`text-sm font-extrabold ${isSelected ? 'text-[#050816]' : 'text-white'}`}>
+                        <div className={`text-sm font-extrabold ${isSelected ? 'text-[#050816]' : 'text-ink-strong'}`}>
                           {cycle.label}
                         </div>
-                        <div className={`text-[10px] ${isSelected ? 'text-[#050816]/80' : 'text-slate-400'}`}>
+                        <div className={`text-[10px] ${isSelected ? 'text-[#050816]/80' : 'text-ink-faint'}`}>
                           {cycle.desc}
                         </div>
                       </button>
@@ -508,9 +508,9 @@ WhatsApp ({SITE_CONFIG.contact.phone})
 
             {/* Calculated Summary Card */}
             <div className="lg:col-span-5">
-              <div className="p-6 sm:p-7 rounded-3xl bg-[#050816] border border-white/15 space-y-5">
-                <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                  <span className="text-xs font-bold uppercase text-slate-400 tracking-wider">
+              <div className="p-6 sm:p-7 rounded-3xl bg-app border border-edge-strong space-y-5">
+                <div className="flex items-center justify-between pb-3 border-b border-edge">
+                  <span className="text-xs font-bold uppercase text-ink-faint tracking-wider">
                     Total Payable Amount
                   </span>
                   <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#00E5FF]/10 text-[#00E5FF] font-semibold">
@@ -520,10 +520,10 @@ WhatsApp ({SITE_CONFIG.contact.phone})
 
                 <div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl sm:text-5xl font-extrabold text-white font-['Manrope']">
+                    <span className="text-4xl sm:text-5xl font-extrabold text-ink-strong font-['Manrope']">
                       ₹{totalAmount}
                     </span>
-                    <span className="text-xs text-slate-400 font-medium">
+                    <span className="text-xs text-ink-faint font-medium">
                       for {cycleMonths} {cycleMonths === 1 ? 'month' : 'months'}
                     </span>
                   </div>
@@ -534,18 +534,18 @@ WhatsApp ({SITE_CONFIG.contact.phone})
                   )}
                 </div>
 
-                <div className="space-y-2 text-xs text-slate-300 pt-3 border-t border-white/5">
+                <div className="space-y-2 text-xs text-ink-soft pt-3 border-t border-edge">
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Allocated Speed:</span>
-                    <span className="text-white font-semibold">{currentPlan?.speedMbps} Mbps Symmetric</span>
+                    <span className="text-ink-faint">Allocated Speed:</span>
+                    <span className="text-ink-strong font-semibold">{currentPlan?.speedMbps} Mbps Symmetric</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Data Allowance:</span>
-                    <span className="text-white font-semibold">Truly Unlimited FTTH</span>
+                    <span className="text-ink-faint">Data Allowance:</span>
+                    <span className="text-ink-strong font-semibold">Truly Unlimited FTTH</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-400">Support Level:</span>
-                    <span className="text-white font-semibold">Local Sindri Crew Dispatch</span>
+                    <span className="text-ink-faint">Support Level:</span>
+                    <span className="text-ink-strong font-semibold">Local Sindri Crew Dispatch</span>
                   </div>
                 </div>
 
@@ -566,7 +566,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] text-white text-xs font-semibold border border-white/10 transition-colors"
+                    className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-white/[0.06] hover:bg-slate-200 dark:hover:bg-white/[0.1] text-ink-strong text-xs font-semibold border border-edge transition-colors"
                   >
                     <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
                     <span>Renew via WhatsApp ({SITE_CONFIG.contact.phone})</span>
@@ -580,19 +580,19 @@ WhatsApp ({SITE_CONFIG.contact.phone})
 
       {/* Need Help with a Payment Card */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="p-7 sm:p-8 rounded-3xl bg-[#0B1224] border border-white/15 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="p-7 sm:p-8 rounded-3xl bg-surface border border-edge-strong flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-1">
-            <h3 className="text-xl font-bold text-white font-['Manrope']">
+            <h3 className="text-xl font-bold text-ink-strong font-['Manrope']">
               Need help with a payment?
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
+            <p className="text-xs sm:text-sm text-ink-soft leading-relaxed max-w-2xl">
               Money debited but the plan not renewed? Call or message us with the transaction reference and we will trace it and set it right.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <a
               href={getTelLink()}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-xs font-bold text-white border border-white/15 transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/[0.14] text-xs font-bold text-ink-strong border border-edge-strong transition-all"
             >
               <Phone className="w-4 h-4 text-[#00E5FF]" />
               <span>{SITE_CONFIG.contact.phone}</span>
@@ -613,38 +613,38 @@ WhatsApp ({SITE_CONFIG.contact.phone})
       {/* Billing, In Plain Terms Section (from legacy pay.html) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-['Manrope']">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-ink-strong font-['Manrope']">
             Billing, in plain terms
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-1">
+          <p className="text-xs sm:text-sm text-ink-faint mt-1">
             Transparent policies, clear receipts, zero hidden conditions.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="glass-card rounded-3xl p-7 border border-white/10 space-y-3">
-            <h3 className="text-lg font-bold text-white font-['Manrope']">
+          <div className="glass-card rounded-3xl p-7 border border-edge space-y-3">
+            <h3 className="text-lg font-bold text-ink-strong font-['Manrope']">
               Advance billing
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-ink-soft leading-relaxed">
               Broadband is billed in advance for the cycle you choose &mdash; monthly, quarterly, half-yearly or yearly. The service stays active for the full paid period.
             </p>
           </div>
 
-          <div className="glass-card rounded-3xl p-7 border border-white/10 space-y-3">
-            <h3 className="text-lg font-bold text-white font-['Manrope']">
+          <div className="glass-card rounded-3xl p-7 border border-edge space-y-3">
+            <h3 className="text-lg font-bold text-ink-strong font-['Manrope']">
               Receipt for every payment
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-ink-soft leading-relaxed">
               A payment receipt is issued each time. Businesses that need an invoice for their records can ask us for one.
             </p>
           </div>
 
-          <div className="glass-card rounded-3xl p-7 border border-white/10 space-y-3">
-            <h3 className="text-lg font-bold text-white font-['Manrope']">
+          <div className="glass-card rounded-3xl p-7 border border-edge space-y-3">
+            <h3 className="text-lg font-bold text-ink-strong font-['Manrope']">
               Renewal reminder
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-ink-soft leading-relaxed">
               We message you before your plan expires. If payment is delayed the connection is suspended, not disconnected, for a short grace period.
             </p>
           </div>
@@ -656,7 +656,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
         <div className="p-6 sm:p-7 rounded-3xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-4">
           <AlertTriangle className="w-6 h-6 text-amber-400 shrink-0 mt-0.5" />
           <div className="space-y-1">
-            <h4 className="text-sm font-bold text-white">Security & Anti-Fraud Advisory</h4>
+            <h4 className="text-sm font-bold text-ink-strong">Security & Anti-Fraud Advisory</h4>
             <p className="text-xs sm:text-sm text-amber-200/90 leading-relaxed">
               {SITE_CONFIG.securityAdvisory}
             </p>
@@ -666,7 +666,7 @@ WhatsApp ({SITE_CONFIG.contact.phone})
 
       {/* Self-KYC Portal link & Policy References */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-7 rounded-3xl bg-[#050816] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+        <div className="p-7 rounded-3xl bg-app border border-edge flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ink-faint">
           <div className="flex items-center gap-3">
             <FileText className="w-5 h-5 text-[#00E5FF] shrink-0" />
             <span>
@@ -684,10 +684,10 @@ WhatsApp ({SITE_CONFIG.contact.phone})
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Link to="/refund" className="hover:text-white transition-colors">
+            <Link to="/refund" className="hover:text-ink-strong transition-colors">
               Refund &amp; Cancellation Policy &rsaquo;
             </Link>
-            <Link to="/service-delivery" className="hover:text-white transition-colors">
+            <Link to="/service-delivery" className="hover:text-ink-strong transition-colors">
               Service Delivery Policy &rsaquo;
             </Link>
           </div>

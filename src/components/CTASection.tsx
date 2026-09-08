@@ -37,7 +37,7 @@ export const CTASection: React.FC = () => {
 
               <Link
                 to="/coverage"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 text-white text-sm font-bold active:scale-95 transition-all shadow-md"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-slate-100 dark:bg-white/[0.08] hover:bg-slate-200 dark:hover:bg-white/[0.14] border border-edge-strong text-ink-strong text-sm font-bold active:scale-95 transition-all shadow-md"
               >
                 <Search className="w-4 h-4 text-[#00E5FF]" />
                 <span>Check Availability</span>

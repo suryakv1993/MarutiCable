@@ -8,11 +8,11 @@ export const WhatsAppButton: React.FC = () => {
   return (
     <div className="fixed bottom-20 md:bottom-6 right-5 z-40 flex items-center">
       {showTooltip && (
-        <div className="hidden sm:flex items-center gap-2 bg-[#0B1224] text-white border border-white/10 px-3 py-2 rounded-xl shadow-xl shadow-black/50 text-xs mr-3 opacity-100 transition-opacity duration-200">
+        <div className="hidden sm:flex items-center gap-2 bg-surface text-ink-strong border border-edge px-3 py-2 rounded-xl shadow-xl shadow-black/50 text-xs mr-3 opacity-100 transition-opacity duration-200">
           <span>Need help or connection info? Chat with Sunil Kumar & team</span>
           <button
             onClick={() => setShowTooltip(false)}
-            className="text-slate-400 hover:text-white p-0.5 rounded"
+            className="text-ink-faint hover:text-ink-strong p-0.5 rounded"
             aria-label="Dismiss tooltip"
           >
             <X className="w-3 h-3" />

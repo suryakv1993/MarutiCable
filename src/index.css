@@ -1,16 +1,49 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --bg-primary: #050816;
-    --bg-secondary: #0B1224;
-    --brand-blue: #19B5FE;
-    --accent-cyan: #00E5FF;
-    --brand-purple: #6C63FF;
-    --text-primary: #F8FAFC;
-    --text-muted: #94A3B8;
-  }
+/* Use a class-based dark variant (default is dark via .dark on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
 
+/* Semantic theme tokens mapped to Tailwind utilities via @theme inline */
+@theme inline {
+  --color-app: var(--app-bg);
+  --color-surface: var(--surface-bg);
+  --color-surface-2: var(--surface-2-bg);
+  --color-edge: var(--edge-color);
+  --color-edge-strong: var(--edge-strong);
+  --color-ink: var(--ink);
+  --color-ink-strong: var(--ink-strong);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+}
+
+/* Dark theme (default) — current appearance */
+:root,
+.dark {
+  --app-bg: #050816;
+  --surface-bg: #0B1224;
+  --surface-2-bg: #070c1d;
+  --edge-color: rgba(255, 255, 255, 0.08);
+  --edge-strong: rgba(255, 255, 255, 0.15);
+  --ink: #F8FAFC;
+  --ink-strong: #FFFFFF;
+  --ink-soft: #CBD5E1;
+  --ink-faint: #94A3B8;
+}
+
+/* Light theme */
+:root:not(.dark) {
+  --app-bg: #FFFFFF;
+  --surface-bg: #FFFFFF;
+  --surface-2-bg: #F1F5F9;
+  --edge-color: #E2E8F0;
+  --edge-strong: #CBD5E1;
+  --ink: #0F172A;
+  --ink-strong: #020617;
+  --ink-soft: #334155;
+  --ink-faint: #64748B;
+}
+
+@layer base {
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
@@ -18,10 +51,11 @@
 
   body {
     font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #050816;
-    color: #F8FAFC;
+    background-color: var(--app-bg);
+    color: var(--ink);
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   /* Prevent browser default outline rings on mouse/touch clicks */
@@ -45,10 +79,10 @@
 }
 
 .glass-card {
-  background: rgba(11, 18, 36, 0.75);
+  background: var(--surface-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--edge-color);
 }
 
 .glass-card-hover {
@@ -68,14 +102,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #050816;
+  background: var(--app-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: var(--ink-faint);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: var(--edge-strong);
 }

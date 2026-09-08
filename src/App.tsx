@@ -1,5 +1,6 @@
 import React from 'react';
 import { RouterProvider, useRouter } from './context/RouterContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { SEOHead } from './components/SEOHead';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -62,7 +63,7 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#050816] text-[#F8FAFC] antialiased selection:bg-[#00E5FF]/20 selection:text-[#00E5FF]">
+    <div className="min-h-screen flex flex-col bg-app text-ink antialiased selection:bg-[#00E5FF]/20 selection:text-[#00E5FF]">
       {/* Route-aware Dynamic SEO Meta Tags */}
       <SEOHead currentPath={normalizedPath} />
 
@@ -88,8 +89,10 @@ const AppContent: React.FC = () => {
 
 export default function App() {
   return (
-    <RouterProvider>
-      <AppContent />
-    </RouterProvider>
+    <ThemeProvider>
+      <RouterProvider>
+        <AppContent />
+      </RouterProvider>
+    </ThemeProvider>
   );
 }

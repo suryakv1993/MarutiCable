@@ -13,10 +13,10 @@ export const ServiceTimelinesSection: React.FC = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-[#00E5FF] px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 inline-block mb-3 font-['Manrope']">
             Operations & Fulfillment
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             Service Timelines
           </h2>
-          <p className="mt-3 text-base text-slate-400">
+          <p className="mt-3 text-base text-ink-faint">
             Clear, honest turnaround times for recharges, new installations, and site feasibility checks.
           </p>
         </div>
@@ -32,25 +32,25 @@ export const ServiceTimelinesSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="glass-card rounded-2xl p-6 border border-white/10 flex flex-col justify-between"
+                className="glass-card rounded-2xl p-6 border border-edge flex flex-col justify-between"
               >
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-[#00E5FF]/10 border border-[#00E5FF]/20 flex items-center justify-center text-[#00E5FF] mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <h3 className="text-sm font-bold text-white mb-2 font-['Manrope']">
+                  <h3 className="text-sm font-bold text-ink-strong mb-2 font-['Manrope']">
                     {item.service}
                   </h3>
 
-                  <div className="p-3 rounded-xl bg-white/[0.04] border border-white/5 mb-3">
+                  <div className="p-3 rounded-xl bg-slate-100/80 dark:bg-white/[0.04] border border-edge mb-3">
                     <div className="flex items-center gap-2 text-xs font-bold text-[#00E5FF]">
                       <Clock className="w-3.5 h-3.5 shrink-0" />
                       <span>{item.timeframe}</span>
                     </div>
                   </div>
 
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-xs text-ink-faint leading-relaxed">
                     {item.description}
                   </p>
                 </div>

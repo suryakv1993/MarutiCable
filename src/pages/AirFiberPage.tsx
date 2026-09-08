@@ -15,10 +15,10 @@ export const AirFiberPage: React.FC = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-[#6C63FF] px-3 py-1 rounded-full bg-[#6C63FF]/10 border border-[#6C63FF]/20 inline-block mb-3 font-['Manrope']">
             Fixed Wireless Technology
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-['Manrope']">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
             Maruti Air-Fiber Wireless Broadband
           </h1>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">
             Wireless broadband for locations where physical fiber has not reached yet. Delivering high-throughput connectivity straight to an outdoor wireless device on your rooftop—no road digging or pole stringing required.
           </p>
         </div>
@@ -33,10 +33,10 @@ export const AirFiberPage: React.FC = () => {
           ].map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div key={idx} className="glass-card rounded-2xl p-5 border border-white/10">
+              <div key={idx} className="glass-card rounded-2xl p-5 border border-edge">
                 <Icon className="w-5 h-5 text-[#6C63FF] mb-2" />
-                <div className="text-sm font-bold text-white font-['Manrope']">{item.title}</div>
-                <div className="text-xs text-slate-400 mt-1">{item.desc}</div>
+                <div className="text-sm font-bold text-ink-strong font-['Manrope']">{item.title}</div>
+                <div className="text-xs text-ink-faint mt-1">{item.desc}</div>
               </div>
             );
           })}
@@ -48,50 +48,50 @@ export const AirFiberPage: React.FC = () => {
 
       {/* How Air-Fiber Works Section */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-card rounded-3xl p-8 sm:p-12 border border-white/10">
+        <div className="glass-card rounded-3xl p-8 sm:p-12 border border-edge">
           <div className="max-w-3xl mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-['Manrope']">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
               How Air-Fiber Works at Your Location
             </h2>
-            <p className="mt-2 text-sm text-slate-300 leading-relaxed">
+            <p className="mt-2 text-sm text-ink-soft leading-relaxed">
               Air-Fiber uses high-frequency directional wireless waves from our central Sindri distribution towers to deliver high-speed broadband directly into standalone houses, colonies, and commercial premises located beyond immediate underground cable runs.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-[#050816] border border-white/10">
+            <div className="p-6 rounded-2xl bg-app border border-edge">
               <span className="text-xs font-bold text-[#6C63FF] uppercase tracking-wider">Step 1</span>
-              <h3 className="text-base font-bold text-white mt-1 mb-2 font-['Manrope']">
+              <h3 className="text-base font-bold text-ink-strong mt-1 mb-2 font-['Manrope']">
                 LOS Feasibility Survey
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-ink-faint leading-relaxed">
                 Our technician inspects your rooftop or terrace to ensure an unobstructed optical line-of-sight to the nearest Maruti Cable radio tower.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#050816] border border-white/10">
+            <div className="p-6 rounded-2xl bg-app border border-edge">
               <span className="text-xs font-bold text-[#6C63FF] uppercase tracking-wider">Step 2</span>
-              <h3 className="text-base font-bold text-white mt-1 mb-2 font-['Manrope']">
+              <h3 className="text-base font-bold text-ink-strong mt-1 mb-2 font-['Manrope']">
                 Outdoor Receiver Mounting
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-ink-faint leading-relaxed">
                 A weatherproof outdoor transceiver is safely installed on a pole clamp and calibrated for signal strength and low jitter.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#050816] border border-white/10">
+            <div className="p-6 rounded-2xl bg-app border border-edge">
               <span className="text-xs font-bold text-[#6C63FF] uppercase tracking-wider">Step 3</span>
-              <h3 className="text-base font-bold text-white mt-1 mb-2 font-['Manrope']">
+              <h3 className="text-base font-bold text-ink-strong mt-1 mb-2 font-['Manrope']">
                 Indoor Wi-Fi Routing
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-ink-faint leading-relaxed">
                 A shielded Cat6 cable runs from the roof into your rooms, connecting to your Wi-Fi router for whole-home wireless coverage.
               </p>
             </div>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <span className="text-xs text-slate-400">
+          <div className="mt-8 pt-6 border-t border-edge flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span className="text-xs text-ink-faint">
               Note: Air-Fiber installations are subject to site survey and clear radio signal availability.
             </span>
             <Link

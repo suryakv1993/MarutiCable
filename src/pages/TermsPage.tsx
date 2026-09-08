@@ -8,21 +8,21 @@ export const TermsPage: React.FC = () => {
         <span className="text-xs font-bold uppercase tracking-widest text-[#00E5FF] px-3 py-1 rounded-full bg-[#00E5FF]/10 border border-[#00E5FF]/20 inline-block mb-3 font-['Manrope']">
           Legal & Compliance
         </span>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-['Manrope']">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-ink-strong tracking-tight font-['Manrope']">
           Terms & Conditions
         </h1>
-        <p className="mt-2 text-xs text-slate-400">
+        <p className="mt-2 text-xs text-ink-faint">
           Last Updated: March 2025 • Applicable to all subscriber services provided by Maruti Cable
         </p>
       </div>
 
-      <div className="glass-card rounded-3xl p-8 sm:p-10 border border-white/10 space-y-8 text-slate-300 text-xs sm:text-sm leading-relaxed">
+      <div className="glass-card rounded-3xl p-8 sm:p-10 border border-edge space-y-8 text-ink-soft text-xs sm:text-sm leading-relaxed">
         <section className="space-y-3">
-          <h2 className="text-base sm:text-lg font-bold text-white font-['Manrope']">
+          <h2 className="text-base sm:text-lg font-bold text-ink-strong font-['Manrope']">
             1. Firm Identity & Acceptance of Terms
           </h2>
           <p>
-            These Terms and Conditions govern the provision of high-speed optical fiber (FTTH) and fixed wireless broadband (Air-Fiber) services provided by <strong className="text-white">Maruti Cable</strong>, a proprietorship firm operated by <strong className="text-white">{SITE_CONFIG.operatorName}</strong>, having its registered office at <strong className="text-white">{SITE_CONFIG.contact.address.full}</strong>, operating as an authorised franchise partner of <strong className="text-white">{SITE_CONFIG.franchisePartner}</strong>.
+            These Terms and Conditions govern the provision of high-speed optical fiber (FTTH) and fixed wireless broadband (Air-Fiber) services provided by <strong className="text-ink-strong">Maruti Cable</strong>, a proprietorship firm operated by <strong className="text-ink-strong">{SITE_CONFIG.operatorName}</strong>, having its registered office at <strong className="text-ink-strong">{SITE_CONFIG.contact.address.full}</strong>, operating as an authorised franchise partner of <strong className="text-ink-strong">{SITE_CONFIG.franchisePartner}</strong>.
           </p>
           <p>
             By subscribing to, recharging, or utilizing any of our broadband services, you agree to be bound by these terms, prevailing Department of Telecommunications (DoT) guidelines, and applicable laws of India.
@@ -30,7 +30,7 @@ export const TermsPage: React.FC = () => {
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-base sm:text-lg font-bold text-white font-['Manrope']">
+          <h2 className="text-base sm:text-lg font-bold text-ink-strong font-['Manrope']">
             2. Provision of Service & Feasibility
           </h2>
           <p>
@@ -39,7 +39,7 @@ export const TermsPage: React.FC = () => {
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-base sm:text-lg font-bold text-white font-['Manrope']">
+          <h2 className="text-base sm:text-lg font-bold text-ink-strong font-['Manrope']">
             3. Subscriber KYC & Lawful Use
           </h2>
           <p>
@@ -48,7 +48,7 @@ export const TermsPage: React.FC = () => {
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-base sm:text-lg font-bold text-white font-['Manrope']">
+          <h2 className="text-base sm:text-lg font-bold text-ink-strong font-['Manrope']">
             4. Billing, Plans & Taxes
           </h2>
           <p>
@@ -57,7 +57,7 @@ export const TermsPage: React.FC = () => {
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-base sm:text-lg font-bold text-white font-['Manrope']">
+          <h2 className="text-base sm:text-lg font-bold text-ink-strong font-['Manrope']">
             5. Customer Premises Equipment (CPE)
           </h2>
           <p>
@@ -66,7 +66,7 @@ export const TermsPage: React.FC = () => {
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-base sm:text-lg font-bold text-white font-['Manrope']">
+          <h2 className="text-base sm:text-lg font-bold text-ink-strong font-['Manrope']">
             6. Service Availability & Maintenance
           </h2>
           <p>
@@ -75,7 +75,7 @@ export const TermsPage: React.FC = () => {
         </section>
 
         <section className="space-y-3">
-          <h2 className="text-base sm:text-lg font-bold text-white font-['Manrope']">
+          <h2 className="text-base sm:text-lg font-bold text-ink-strong font-['Manrope']">
             7. Grievance Redressal & Jurisdiction
           </h2>
           <p>
