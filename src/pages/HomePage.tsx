@@ -22,7 +22,7 @@ export const HomePage: React.FC = () => {
   return (
     <div className="relative">
       {/* SECTION 1 — HERO */}
-      <section className="relative min-h-[92vh] flex flex-col justify-center pt-4 pb-16 sm:pt-16 sm:pb-24 overflow-hidden">
+      <section className="relative min-h-[92vh] flex flex-col justify-start pt-4 pb-16 sm:justify-center sm:pt-16 sm:pb-24 overflow-hidden">
         {/* Animated lightweight Fiber Network Background */}
         <NetworkBackground interactive={true} />
 
