@@ -179,7 +179,9 @@ coordinates: {
 
 ## ☁️ Deploying to Cloudflare (Workers / Pages)
 
-The project uses **`@cloudflare/vite-plugin`** + **Wrangler** for its Cloudflare integration. Configuration lives in `wrangler.jsonc`, which enables native single-page-application fallback (`assets.not_found_handling`), so deep links like `/pay-bill` resolve correctly — no `_redirects` file needed.
+This is a **plain static Vite app** deployed to Cloudflare Workers with static assets. Configuration lives in `wrangler.jsonc`, which serves the built `dist/` folder and enables single-page-application fallback (`assets.not_found_handling`), so deep links like `/pay-bill` resolve correctly — no `_redirects` file needed.
+
+The deploy must **build first**, then upload assets. `wrangler deploy` alone does NOT build — it only uploads, so the build step must run before it.
 
 1. **Push this repository to GitHub:**
    ```bash
@@ -194,10 +196,10 @@ The project uses **`@cloudflare/vite-plugin`** + **Wrangler** for its Cloudflare
 2. **Create the Cloudflare project:**
    - Go to **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
    - Select the `suryakv1993/MarutiCable` repository.
-   - Use these build settings:
+   - Use these build settings (**important:** build before deploy):
      | Setting | Value |
      |---|---|
-     | Build command | `npm install && npx wrangler deploy` |
+     | Build command | `npm install && npm run build && npx wrangler deploy` |
      | Build output directory | `dist` |
      | Production branch | `main` |
    - Click **Save and Deploy**.
@@ -206,7 +208,7 @@ The project uses **`@cloudflare/vite-plugin`** + **Wrangler** for its Cloudflare
    ```bash
    npm run build
    npx wrangler login
-   npm run deploy
+   npx wrangler deploy
    ```
 
 Client-side routing is handled by `window.history.pushState`; Cloudflare's SPA asset handling serves `index.html` for unknown paths.
